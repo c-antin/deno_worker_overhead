@@ -1,5 +1,9 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+pub fn work_heap() -> String {
+    let mut sum = "".to_string();
+    for _ in 0..100_000_000 {
+        sum = sum + "#";
+    }
+    sum
 }
 
 #[cfg(test)]
@@ -7,8 +11,8 @@ mod tests {
     use super::*;
 
     #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    fn work_heap_length() {
+        let result = work_heap();
+        assert_eq!(result.len(), 100_000_000);
     }
 }
